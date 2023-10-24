@@ -12,7 +12,7 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-	
+		
+	-- background color
 	use { "ellisonleao/gruvbox.nvim" }
-
 end)

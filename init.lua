@@ -1,4 +1,4 @@
-require("plugins")
+require("core.init")
 
 vim.opt.number = true
 vim.opt.relativenumber = true
