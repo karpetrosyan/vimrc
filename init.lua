@@ -31,3 +31,10 @@ vim.keymap.set(
     end
 )
 
+vim.keymap.set(
+    {"n", "i"},
+    "<c-s>",
+    function()
+	vim.cmd.w()
+    end
+)

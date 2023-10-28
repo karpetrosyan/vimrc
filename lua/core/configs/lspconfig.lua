@@ -15,3 +15,4 @@ require('mason-lspconfig').setup({
 })
 
 require('lspconfig').lua_ls.setup({handlers = {['textDocument/publishDiagnostics'] = function(...) end  }})
+require('lspconfig').rust_analyzer.setup({handlers = {['textDocument/publishDiagnostics'] = function(...) end  }})

@@ -20,8 +20,8 @@ local function get_github()
     end
 end
 
+
 local function get_repo_stats(url)
-    print(url)
     local stream = io.popen(string.format("curl --silent %s", url))
 
     json = stream:read("*a")
@@ -105,4 +105,6 @@ local function set_github_widget()
     end
 end
 
-set_github_widget()
+
+vim.api.nvim_create_user_command("ShowRepo", set_github_widget, {})
+
