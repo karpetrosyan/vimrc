@@ -38,3 +38,20 @@ vim.keymap.set(
 	vim.cmd.w()
     end
 )
+
+vim.keymap.set(
+    {"n"},
+    "<Space>r",
+    function ()
+	local filetype = vim.bo.filetype
+	vim.cmd.w()
+	    
+	if filetype == "lua" then
+	    vim.cmd [[ so ]]
+	elseif filetype == "python" then
+	    vim.cmd [[ !python % ]]	
+	elseif filetype == "rust" then
+	    vim.cmd [[ !cargo run ]]
+	end
+    end
+)
