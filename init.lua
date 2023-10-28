@@ -44,8 +44,13 @@ vim.keymap.set(
     "<Space>r",
     function ()
 	local filetype = vim.bo.filetype
-	vim.cmd.w()
 	    
+	start = os.clock()
+
+	while os.clock() - start <= 0.5 do end
+
+	vim.cmd.w()
+
 	if filetype == "lua" then
 	    vim.cmd [[ so ]]
 	elseif filetype == "python" then
@@ -55,3 +60,4 @@ vim.keymap.set(
 	end
     end
 )
+
