@@ -1,0 +1,11 @@
+[tool.ruff]
+select = [
+    "F", 
+    "E", 
+    "W", 
+    "I", 
+    "TRIO",
+    "ASYNC",
+    "DJ",
+]
+preview = true
