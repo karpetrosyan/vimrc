@@ -18,11 +18,10 @@ require('lspconfig').lua_ls.setup({ handlers = { ['textDocument/publishDiagnosti
 
 require('lspconfig').ruff_lsp.setup {
 	on_attach = function()
-		print('ruff here')
 	end,
 	init_options = {
 		settings = {
-			args = { "--config=pyproject.toml" },
+			args = { "--config=" .. vim.env.HOME .. "/.config/nvim/lua/core/configs/pyproject.toml" },
 		}
 	}
 }
