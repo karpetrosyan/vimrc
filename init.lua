@@ -42,7 +42,7 @@ vim.keymap.set(
 )
 
 vim.keymap.set(
-	all_modes,
+	{ "n" },
 	"<Space>r",
 	function()
 		local filetype = vim.bo.filetype
@@ -70,10 +70,18 @@ vim.keymap.set(
 )
 
 vim.keymap.set(
-	{"n", "i"},
-	"<c-a>",
-	function ()
-	    vim.cmd("normal! ggVG")
-    end
-    )
+	{ "t" },
+	"<esc>",
+	function()
+		vim.cmd.ToggleTerm()
+		vim.cmd.ToggleTerm()
+	end
+)
 
+vim.keymap.set(
+	{ "n", "i" },
+	"<c-a>",
+	function()
+		vim.cmd("normal! ggVG")
+	end
+)
