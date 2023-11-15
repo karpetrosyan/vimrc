@@ -9,3 +9,4 @@ select = [
     "DJ",
 ]
 preview = true
+line-length = 120
