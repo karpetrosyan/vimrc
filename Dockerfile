@@ -2,7 +2,7 @@ FROM alpine:latest
 
 ENV CXX=clang++ CC=clang
 RUN apk update \
-    && apk add \
+    && apk add --update \
     	# General
         neovim \
 	git \
@@ -23,9 +23,10 @@ RUN apk update \
 	libstdc++ \
 	clang \
 	build-base \
+	nodejs \
+	npm \
     && ln -sf python3 /usr/bin/python
 
-RUN apk add --update nodejs npm
 COPY nvim /root/.config/nvim
 
 ENTRYPOINT ["/bin/sh"]
