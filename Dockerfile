@@ -25,7 +25,8 @@ RUN apk update \
 	build-base \
 	nodejs \
 	npm \
-    && ln -sf python3 /usr/bin/python
+    && ln -sf python3 /usr/bin/python \
+    && rm -rf /var/cache/apk/*
 
 COPY nvim /root/.config/nvim
 
