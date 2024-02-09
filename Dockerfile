@@ -1,5 +1,6 @@
 FROM alpine:latest
 
+
 ENV CXX=clang++ CC=clang
 RUN apk update \
     && apk add --update \
