@@ -32,3 +32,4 @@ RUN apk update \
 COPY nvim /root/.config/nvim
 
 ENTRYPOINT ["/bin/sh"]
+
